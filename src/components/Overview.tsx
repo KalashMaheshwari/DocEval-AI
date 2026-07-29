@@ -4,7 +4,7 @@ export default function Overview() {
       <div>
         <h1 className="text-3xl font-semibold tracking-tight text-slate-900 mb-2">DocEval AI: LLM Documentation Evaluation Framework</h1>
         <p className="text-slate-500 text-base leading-relaxed">
-          DocEval AI is a benchmark platform for auditing LLM-generated technical documentation. It evaluates repository READMEs across a 5-metric rubric (Accuracy, Completeness, Hallucination, Structure, Scope), featuring automated LLM-as-a-Judge scoring, failure mode isolation, and dataset export.
+          DocEval AI is a benchmark platform for auditing LLM-generated technical documentation. It evaluates repository READMEs across a 5-metric rubric (Accuracy, Completeness, Hallucination, Structure, Scope), featuring human-annotated evaluations, qualitative failure mode isolation, and dataset export.
         </p>
       </div>
 

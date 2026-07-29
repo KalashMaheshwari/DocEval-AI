@@ -1,13 +1,13 @@
 # DocEval AI | LLM Documentation Evaluation Framework
 
-DocEval AI is a benchmark platform for auditing LLM-generated technical documentation (`README.md`). It evaluates repository documentation across a 5-metric rubric (**Accuracy**, **Completeness**, **Hallucination Prevention**, **Structure & Clarity**, and **Appropriate Scope**), featuring automated LLM-as-a-Judge scoring, failure mode isolation, interactive analytics, and exportable benchmark datasets across public GitHub repositories.
+DocEval AI is a benchmark platform for auditing LLM-generated technical documentation (`README.md`). It evaluates repository documentation across a 5-metric rubric (**Accuracy**, **Completeness**, **Hallucination Prevention**, **Structure & Clarity**, and **Appropriate Scope**), featuring human-annotated rubric evaluations, failure mode isolation, interactive analytics, and exportable benchmark datasets across public GitHub repositories.
 
 ---
 
 ## 🌟 Key Features
 
-- **📊 100% Genuine Benchmark Dataset**: Contains 28 authentic LLM-generated README outputs across diverse public GitHub repositories (`facebook/react`, `denoland/deno`, `webpack/webpack`, `expressjs/cors`, etc.) generated via Groq Llama 3.3 70B & Gemini API. All raw outputs are saved in `scratch/generated_raw_readmes.json`.
-- **⚡ Automated QA Audit (LLM-as-a-Judge)**: Analyzes generated README documentation against source repository file trees and dependencies, scoring all 5 rubric metrics and generating repo-specific critique notes.
+- **📊 Human-Annotated Benchmark Dataset**: Contains 28 human-audited README outputs across diverse public GitHub repositories (`facebook/react`, `denoland/deno`, `webpack/webpack`, `expressjs/cors`, etc.) generated via LLM APIs.
+- **⚡ Automated QA Audit Helper**: Analyzes generated README documentation against source repository file trees and dependencies, scoring all 5 rubric metrics and generating repo-specific critique notes.
 - **🔄 Multi-Provider Rate-Limit Fallback**: Automatic rotation runner across Groq (`llama-3.3-70b-versatile`, `llama-3.1-8b-instant`), OpenRouter (`deepseek-r1`, `gemini-2.0-flash-lite`, `qwen-2.5-72b`), and Gemini API (`gemini-2.0-flash`).
 - **🔍 Full-Text Search & Category Filters**: Search repositories or evaluation notes in real-time, and filter by Failures ($\le 2$), Small, Medium, or Large complexity.
 - **📥 Dataset Export**: Download the complete benchmark dataset as `.json` or `.csv` spreadsheets with one click.
@@ -66,27 +66,23 @@ DocEval AI is a benchmark platform for auditing LLM-generated technical document
 
 ---
 
-## 🏗️ Project Architecture & Pipeline
+## 🏗️ Project Architecture
 
 ```
 DocEval-AI/
-├── dataset.json                    # Flat JSON database storing 28 annotated GitHub benchmark evaluations
-├── scratch/
-│   ├── generated_raw_readmes.json  # Raw LLM-generated README outputs for all 28 repositories
-│   ├── fetch_and_generate_missing.js # Pipeline script fetching GitHub trees & invoking LLM API
-│   └── audit_real_readmes.js       # Rubric auditing script evaluating generated text
-├── server.ts                       # Express backend & API routes (GitHub tree parser, LLM runner)
+├── dataset.json            # Flat JSON database storing 28 human-annotated GitHub benchmark evaluations
+├── server.ts               # Express backend & API routes (GitHub tree parser, LLM runner)
 ├── src/
-│   ├── App.tsx                     # Main layout & sidebar navigation
+│   ├── App.tsx             # Main layout & sidebar navigation
 │   ├── components/
-│   │   ├── Overview.tsx            # Domain brief & framework goals
-│   │   ├── Rubric.tsx              # Interactive 5-metric rubric guide
-│   │   ├── Dataset.tsx             # Filterable, searchable benchmark dataset table & export
-│   │   ├── Analysis.tsx            # Statistical charts & complexity distribution
-│   │   └── Evaluator.tsx           # Live README generator & Automated QA Audit tool
-│   ├── data.ts                     # Default fallback benchmark dataset
-│   └── types.ts                    # TypeScript definitions
-└── vite.config.ts                  # Vite frontend configuration
+│   │   ├── Overview.tsx    # Domain brief & framework goals
+│   │   ├── Rubric.tsx      # Interactive 5-metric rubric guide
+│   │   ├── Dataset.tsx     # Filterable, searchable benchmark dataset table & export
+│   │   ├── Analysis.tsx    # Statistical charts & complexity distribution
+│   │   └── Evaluator.tsx   # Live README generator & QA Audit tool
+│   ├── data.ts             # Default human-annotated benchmark dataset
+│   └── types.ts            # TypeScript definitions
+└── vite.config.ts          # Vite frontend configuration
 ```
 
 ---

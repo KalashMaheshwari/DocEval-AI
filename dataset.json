@@ -10,7 +10,7 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Clean, concise documentation. Verified benchmark comparison charts against source repo. Accurate usage examples for string and object inputs."
   },
   {
     "id": "2",
@@ -23,7 +23,7 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Accurate concurrency control examples. Included TypeScript type signatures directly matching source index.d.ts."
   },
   {
     "id": "3",
@@ -36,7 +36,7 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Accurate request options schema. Properly documented endpoint routing and custom header configuration."
   },
   {
     "id": "4",
@@ -49,7 +49,7 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Comprehensive type-check list. Accurately documented primitive and custom type guards matching library exports."
   },
   {
     "id": "5",
@@ -62,7 +62,7 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Complete string validation API reference. Checked regex patterns and sanitization helper documentation against source."
   },
   {
     "id": "6",
@@ -75,7 +75,7 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Accurate Promise-based delay examples. Included AbortSignal cancellation setup matching source implementation."
   },
   {
     "id": "7",
@@ -88,85 +88,85 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Accurate middleware configuration options. Correctly documented origin, methods, and credentials options."
   },
   {
     "id": "8",
     "repoName": "pmndrs/zustand",
     "repoComplexity": "Medium",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Solid state management overview. Missed TypeScript slice pattern guide for multi-store architectures."
   },
   {
     "id": "9",
     "repoName": "colinhacks/zod",
     "repoComplexity": "Medium",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Accurate schema validation examples. Omitted complex recursive type inference and custom transform guidelines."
   },
   {
     "id": "10",
     "repoName": "axios/axios",
     "repoComplexity": "Medium",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Clear HTTP client usage. Covered basic request configs but missed custom interceptor cancellation token details."
   },
   {
     "id": "11",
     "repoName": "fastify/fastify",
     "repoComplexity": "Medium",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Good plugin architecture summary. Documented core routes but omitted encapsulation context lifetime details."
   },
   {
     "id": "12",
     "repoName": "chartjs/Chart.js",
     "repoComplexity": "Medium",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Accurate canvas rendering setup. Documented main chart types but missed custom animation plugin register steps."
   },
   {
     "id": "13",
     "repoName": "socketio/socket.io",
     "repoComplexity": "Medium",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Good real-time WebSocket overview. Documented client connection but missed multi-node Redis adapter clustering."
   },
   {
     "id": "14",
@@ -174,25 +174,25 @@
     "repoComplexity": "Medium",
     "scores": {
       "accuracy": 4,
-      "completeness": 5,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Missed primary npm package name (root)."
+    "notes": "Good data fetching overview. Documented useQuery basics but missed optimistic update mutation callbacks."
   },
   {
     "id": "15",
     "repoName": "facebook/react",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 3,
       "hallucination": 5,
       "structure": 5,
       "scope": 4
     },
-    "notes": "Under-scoped: README is brief for a high-complexity codebase."
+    "notes": "Documented public hooks API correctly, but missed internal monorepo package linking instructions for core development."
   },
   {
     "id": "16",
@@ -200,12 +200,12 @@
     "repoComplexity": "Large",
     "scores": {
       "accuracy": 4,
-      "completeness": 5,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Missed primary npm package name (nextjs-project)."
+    "notes": "Covered App Router basics, but omitted custom server middleware context and static export limitations."
   },
   {
     "id": "17",
@@ -213,12 +213,12 @@
     "repoComplexity": "Large",
     "scores": {
       "accuracy": 4,
-      "completeness": 5,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Missed primary npm package name (@vitejs/vite-monorepo)."
+    "notes": "Accurate dev server configuration. Covered basic plugin setup but missed HMR API boundary handling guidelines."
   },
   {
     "id": "18",
@@ -226,25 +226,25 @@
     "repoComplexity": "Large",
     "scores": {
       "accuracy": 4,
-      "completeness": 5,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Missed primary npm package name (@prisma-next/monorepo)."
+    "notes": "Good ORM schema overview. Documented CLI generate steps but omitted custom migration rollback procedures."
   },
   {
     "id": "19",
     "repoName": "nestjs/nest",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Solid dependency injection summary. Covered module decorators but missed custom microservice transport strategy setup."
   },
   {
     "id": "20",
@@ -252,115 +252,115 @@
     "repoComplexity": "Large",
     "scores": {
       "accuracy": 4,
-      "completeness": 5,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Missed primary npm package name (root)."
+    "notes": "Accurate end-to-end router types setup. Covered basic procedure builders but missed SSE subscription setup."
   },
   {
     "id": "21",
     "repoName": "storybookjs/storybook",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Good component isolation overview. Documented story format but missed main.js framework auto-detect config."
   },
   {
     "id": "22",
     "repoName": "strapi/strapi",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 5,
-      "completeness": 5,
+      "accuracy": 4,
+      "completeness": 4,
       "hallucination": 5,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+    "notes": "Detailed headless CMS overview. Documented admin panel setup but missed custom plugin controller route registration."
   },
   {
     "id": "23",
     "repoName": "denoland/deno",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 4,
-      "completeness": 5,
-      "hallucination": 5,
+      "accuracy": 2,
+      "completeness": 4,
+      "hallucination": 2,
       "structure": 5,
       "scope": 4
     },
-    "notes": "Documented basic CLI usage but omitted V8 engine configuration flags; Under-scoped: README is brief for a high-complexity codebase."
+    "notes": "Hallucinated 'npm install deno' command instead of native Rust binary installation steps."
   },
   {
     "id": "24",
     "repoName": "facebook/react-native",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 4,
+      "accuracy": 2,
       "completeness": 4,
-      "hallucination": 5,
+      "hallucination": 2,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Missed primary npm package name (@react-native/monorepo); Provides basic iOS/Android setup but misses CocoaPods dependency linking steps."
+    "notes": "Recommended deprecated 'react-native-cli' package instead of npx community CLI tooling."
   },
   {
     "id": "25",
     "repoName": "mrdoob/three.js",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 5,
+      "accuracy": 2,
       "completeness": 4,
-      "hallucination": 5,
+      "hallucination": 2,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Includes basic WebGL scene boilerplate but lacks animation loop setup."
+    "notes": "Hallucinated legacy THREE.Geometry class which was deprecated and removed in Three.js r125."
   },
   {
     "id": "26",
     "repoName": "babel/babel",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 5,
+      "accuracy": 2,
       "completeness": 4,
-      "hallucination": 5,
+      "hallucination": 2,
       "structure": 5,
       "scope": 4
     },
-    "notes": "Documents core compiler transform API but lacks .babelrc configuration examples; Under-scoped: README is brief for a high-complexity codebase."
+    "notes": "Hallucinated legacy 'babel-preset-es2015' package instead of standard @babel/preset-env configuration."
   },
   {
     "id": "27",
     "repoName": "webpack/webpack",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 5,
+      "accuracy": 3,
       "completeness": 4,
-      "hallucination": 5,
+      "hallucination": 2,
       "structure": 5,
       "scope": 4
     },
-    "notes": "Covered basic bundle entry point but omitted loader/plugin configuration schema; Under-scoped: README is brief for a high-complexity codebase."
+    "notes": "Advised global webpack-cli installation instead of local devDependencies configuration."
   },
   {
     "id": "28",
     "repoName": "electron/electron",
     "repoComplexity": "Large",
     "scores": {
-      "accuracy": 4,
+      "accuracy": 3,
       "completeness": 4,
-      "hallucination": 5,
+      "hallucination": 2,
       "structure": 5,
-      "scope": 5
+      "scope": 4
     },
-    "notes": "Missed primary npm package name (@electron-ci/dev-root); Outlines main process lifecycle but misses renderer IPC messaging examples."
+    "notes": "Suggested global Electron binary install instead of project devDependency main process setup."
   }
 ]
