@@ -15,7 +15,7 @@ const cleanErrorMessage = (msg: string) => {
 const LottieDocumentIcon = ({ isAuditing }: { isAuditing: boolean }) => (
   <div className="w-7 h-7 flex items-center justify-center shrink-0">
     {createElement('lottie-player', {
-      src: '/Document OCR Scan.json',
+      src: '/document-ocr-scan.json',
       background: 'transparent',
       speed: isAuditing ? '2' : '1',
       style: { width: '28px', height: '28px' },
