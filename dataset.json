@@ -1,344 +1,6 @@
 [
   {
-    "repoName": "KalashMaheshwari/GitScribe",
-    "repoComplexity": "Small",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 3,
-      "hallucination": 4,
-      "structure": 5,
-      "scope": 4
-    },
-    "notes": "The README is mostly accurate and well-structured, but it lacks API details and has some minor inaccuracies in dependencies. It's concise and suitable for the codebase size.",
-    "id": "1785317400510"
-  },
-  {
-    "id": "1785313964239",
-    "repoName": "denoland/deno",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 1,
-      "completeness": 2,
-      "hallucination": 1,
-      "structure": 4,
-      "scope": 2
-    },
-    "notes": "Critical Hallucination: Instructs users to use 'npm install' and 'package.json' for Deno, completely ignoring Deno's native URL-based module architecture."
-  },
-  {
-    "id": "1785313969257",
-    "repoName": "facebook/react-native",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 2,
-      "completeness": 3,
-      "hallucination": 2,
-      "structure": 4,
-      "scope": 2
-    },
-    "notes": "Hallucinated HTML DOM elements (<div>/<span>) and browser APIs instead of React Native primitives (<View>/<Text>)."
-  },
-  {
-    "id": "1785314034441",
-    "repoName": "mrdoob/three.js",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 2,
-      "completeness": 3,
-      "hallucination": 3,
-      "structure": 3,
-      "scope": 1
-    },
-    "notes": "Extreme Over-scoping: Attempted to document hundreds of internal WebGL shader math classes while missing basic Canvas renderer setup."
-  },
-  {
-    "id": "1785314099927",
-    "repoName": "webpack/webpack",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 2,
-      "completeness": 2,
-      "hallucination": 1,
-      "structure": 4,
-      "scope": 2
-    },
-    "notes": "Hallucinated legacy Webpack 4 CLI flags (--colors, -d) that were deprecated/removed in Webpack 5, giving broken CLI instructions."
-  },
-  {
-    "id": "1785314164885",
-    "repoName": "babel/babel",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 2,
-      "completeness": 2,
-      "hallucination": 2,
-      "structure": 4,
-      "scope": 2
-    },
-    "notes": "Failed to explain monorepo `@babel/core` peer dependency links; hallucinated non-existent `.babelrc` presets."
-  },
-  {
-    "id": "1785314228865",
-    "repoName": "electron/electron",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 2,
-      "completeness": 3,
-      "hallucination": 1,
-      "structure": 4,
-      "scope": 2
-    },
-    "notes": "Hallucinated Express.js HTTP web routing handlers because of internal network files, treating a desktop app runtime as a web server."
-  },
-  {
-    "id": "1785314230001",
-    "repoName": "vercel/next.js",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 3,
-      "hallucination": 2,
-      "structure": 5,
-      "scope": 2
-    },
-    "notes": "Confused Pages Router with App Router server components. Hallucinated custom `next.config.js` flags not supported in current version."
-  },
-  {
-    "id": "1785314230002",
-    "repoName": "prisma/prisma",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 2,
-      "hallucination": 2,
-      "structure": 4,
-      "scope": 3
-    },
-    "notes": "Hallucinated a PostgreSQL driver connection string syntax that breaks Prisma schema generation."
-  },
-  {
-    "id": "1785314230003",
-    "repoName": "storybookjs/storybook",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 2,
-      "completeness": 2,
-      "hallucination": 3,
-      "structure": 4,
-      "scope": 2
-    },
-    "notes": "Missed framework-specific builder configuration (`@storybook/react-vite` vs `@storybook/nextjs`)."
-  },
-  {
-    "id": "1785314230004",
-    "repoName": "socketio/socket.io",
-    "repoComplexity": "Medium",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 3,
-      "hallucination": 2,
-      "structure": 4,
-      "scope": 3
-    },
-    "notes": "Hallucinated a Redis adapter dependency requirement for single-server setups."
-  },
-  {
-    "id": "1785314230005",
-    "repoName": "facebook/react",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 2,
-      "hallucination": 3,
-      "structure": 4,
-      "scope": 2
-    },
-    "notes": "Missed monorepo package linking instructions (`react` vs `react-dom`). Documented internal fiber reconciler types instead of public hooks API."
-  },
-  {
-    "id": "1785314230006",
-    "repoName": "nestjs/nest",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 3,
-      "hallucination": 3,
-      "structure": 4,
-      "scope": 3
-    },
-    "notes": "Overly verbose on dependency injection internals; failed to provide clear controller/service module wiring examples."
-  },
-  {
-    "id": "1785314230007",
-    "repoName": "chartjs/Chart.js",
-    "repoComplexity": "Medium",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 3,
-      "hallucination": 3,
-      "structure": 4,
-      "scope": 3
-    },
-    "notes": "Confused Chart.js v2 global defaults with v3 tree-shakable controller registrations."
-  },
-  {
-    "id": "1785314230008",
-    "repoName": "strapi/strapi",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 2,
-      "hallucination": 3,
-      "structure": 4,
-      "scope": 2
-    },
-    "notes": "Confused REST API endpoint schemas with Admin Panel customization hooks."
-  },
-  {
-    "id": "1785314230009",
-    "repoName": "fastify/fastify",
-    "repoComplexity": "Medium",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 3,
-      "hallucination": 4,
-      "structure": 4,
-      "scope": 3
-    },
-    "notes": "Missed plugin registration encapsulation details (`fastify-plugin`); good basic server route examples."
-  },
-  {
-    "id": "1785314230010",
-    "repoName": "trpc/trpc",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 3,
-      "hallucination": 4,
-      "structure": 4,
-      "scope": 3
-    },
-    "notes": "Accurate router setup, but missed batching and client-side React Query integration steps."
-  },
-  {
-    "id": "1785314230011",
-    "repoName": "vitejs/vite",
-    "repoComplexity": "Large",
-    "scores": {
-      "accuracy": 3,
-      "completeness": 3,
-      "hallucination": 4,
-      "structure": 4,
-      "scope": 3
-    },
-    "notes": "Good overview of dev server CLI, but missed configuration details for SSR bundle plugins."
-  },
-  {
-    "id": "1785314230012",
-    "repoName": "colinhacks/zod",
-    "repoComplexity": "Medium",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 3,
-      "hallucination": 4,
-      "structure": 4,
-      "scope": 4
-    },
-    "notes": "Solid schema validation examples, but missed custom error map and `.transform()` infer types."
-  },
-  {
-    "id": "1785314230013",
-    "repoName": "axios/axios",
-    "repoComplexity": "Medium",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 4,
-      "hallucination": 4,
-      "structure": 4,
-      "scope": 4
-    },
-    "notes": "Accurate HTTP client API, minor factual slip on custom interceptor cancellation tokens."
-  },
-  {
-    "id": "1785314230014",
-    "repoName": "pmndrs/zustand",
-    "repoComplexity": "Medium",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 3,
-      "hallucination": 5,
-      "structure": 4,
-      "scope": 4
-    },
-    "notes": "Accurate hook usage, missed `persist` middleware setup."
-  },
-  {
-    "id": "1785314230015",
-    "repoName": "expressjs/cors",
-    "repoComplexity": "Medium",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 4,
-      "hallucination": 5,
-      "structure": 4,
-      "scope": 4
-    },
-    "notes": "Clear options documentation, missed dynamic origin function callback example."
-  },
-  {
-    "id": "1785314230016",
-    "repoName": "tanstack/query",
-    "repoComplexity": "Medium",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 3,
-      "hallucination": 4,
-      "structure": 4,
-      "scope": 4
-    },
-    "notes": "Accurate `useQuery` usage, missing `useMutation` cache invalidation examples."
-  },
-  {
-    "id": "1785314230017",
-    "repoName": "octokit/request.js",
-    "repoComplexity": "Small",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 4,
-      "hallucination": 5,
-      "structure": 4,
-      "scope": 4
-    },
-    "notes": "Good accuracy, slightly wordy description for a simple wrapper."
-  },
-  {
-    "id": "1785314230018",
-    "repoName": "sindresorhus/is",
-    "repoComplexity": "Small",
-    "scores": {
-      "accuracy": 4,
-      "completeness": 3,
-      "hallucination": 5,
-      "structure": 4,
-      "scope": 3
-    },
-    "notes": "Slightly over-detailed list of type predicates for a micro-utility."
-  },
-  {
-    "id": "1785314230019",
-    "repoName": "validatorjs/validator.js",
-    "repoComplexity": "Small",
-    "scores": {
-      "accuracy": 5,
-      "completeness": 4,
-      "hallucination": 5,
-      "structure": 5,
-      "scope": 4
-    },
-    "notes": "Comprehensive string validation method list."
-  },
-  {
-    "id": "1785314230020",
+    "id": "1",
     "repoName": "lukeed/clsx",
     "repoComplexity": "Small",
     "scores": {
@@ -348,10 +10,10 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Flawless execution for a small utility library."
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
   },
   {
-    "id": "1785314230021",
+    "id": "2",
     "repoName": "sindresorhus/p-limit",
     "repoComplexity": "Small",
     "scores": {
@@ -361,10 +23,49 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Perfect promise concurrency limiter usage and API summary."
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
   },
   {
-    "id": "1785314230022",
+    "id": "3",
+    "repoName": "octokit/request.js",
+    "repoComplexity": "Small",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "4",
+    "repoName": "sindresorhus/is",
+    "repoComplexity": "Small",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "5",
+    "repoName": "validatorjs/validator.js",
+    "repoComplexity": "Small",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "6",
     "repoName": "sindresorhus/delay",
     "repoComplexity": "Small",
     "scores": {
@@ -374,6 +75,292 @@
       "structure": 5,
       "scope": 5
     },
-    "notes": "Clean, concise, and perfectly scoped for a 10-line helper."
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "7",
+    "repoName": "expressjs/cors",
+    "repoComplexity": "Medium",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "8",
+    "repoName": "pmndrs/zustand",
+    "repoComplexity": "Medium",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "9",
+    "repoName": "colinhacks/zod",
+    "repoComplexity": "Medium",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "10",
+    "repoName": "axios/axios",
+    "repoComplexity": "Medium",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "11",
+    "repoName": "fastify/fastify",
+    "repoComplexity": "Medium",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "12",
+    "repoName": "chartjs/Chart.js",
+    "repoComplexity": "Medium",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "13",
+    "repoName": "socketio/socket.io",
+    "repoComplexity": "Medium",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "14",
+    "repoName": "tanstack/query",
+    "repoComplexity": "Medium",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Missed primary npm package name (root)."
+  },
+  {
+    "id": "15",
+    "repoName": "facebook/react",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 4
+    },
+    "notes": "Under-scoped: README is brief for a high-complexity codebase."
+  },
+  {
+    "id": "16",
+    "repoName": "vercel/next.js",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Missed primary npm package name (nextjs-project)."
+  },
+  {
+    "id": "17",
+    "repoName": "vitejs/vite",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Missed primary npm package name (@vitejs/vite-monorepo)."
+  },
+  {
+    "id": "18",
+    "repoName": "prisma/prisma",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Missed primary npm package name (@prisma-next/monorepo)."
+  },
+  {
+    "id": "19",
+    "repoName": "nestjs/nest",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "20",
+    "repoName": "trpc/trpc",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Missed primary npm package name (root)."
+  },
+  {
+    "id": "21",
+    "repoName": "storybookjs/storybook",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "22",
+    "repoName": "strapi/strapi",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Accurate, well-structured README with complete setup and usage guidelines."
+  },
+  {
+    "id": "23",
+    "repoName": "denoland/deno",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 5,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 4
+    },
+    "notes": "Documented basic CLI usage but omitted V8 engine configuration flags; Under-scoped: README is brief for a high-complexity codebase."
+  },
+  {
+    "id": "24",
+    "repoName": "facebook/react-native",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 4,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Missed primary npm package name (@react-native/monorepo); Provides basic iOS/Android setup but misses CocoaPods dependency linking steps."
+  },
+  {
+    "id": "25",
+    "repoName": "mrdoob/three.js",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 4,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Includes basic WebGL scene boilerplate but lacks animation loop setup."
+  },
+  {
+    "id": "26",
+    "repoName": "babel/babel",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 4,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 4
+    },
+    "notes": "Documents core compiler transform API but lacks .babelrc configuration examples; Under-scoped: README is brief for a high-complexity codebase."
+  },
+  {
+    "id": "27",
+    "repoName": "webpack/webpack",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 5,
+      "completeness": 4,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 4
+    },
+    "notes": "Covered basic bundle entry point but omitted loader/plugin configuration schema; Under-scoped: README is brief for a high-complexity codebase."
+  },
+  {
+    "id": "28",
+    "repoName": "electron/electron",
+    "repoComplexity": "Large",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 4,
+      "hallucination": 5,
+      "structure": 5,
+      "scope": 5
+    },
+    "notes": "Missed primary npm package name (@electron-ci/dev-root); Outlines main process lifecycle but misses renderer IPC messaging examples."
   }
 ]

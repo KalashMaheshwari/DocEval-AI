@@ -6,7 +6,7 @@ DocEval AI is a benchmark platform for auditing LLM-generated technical document
 
 ## 🌟 Key Features
 
-- **📊 Annotated Benchmark Dataset**: Includes human & AI-audited evaluations across 28 real public GitHub repositories, including 10 severe failure-case repositories (`denoland/deno`, `facebook/react-native`, `mrdoob/three.js`, `webpack/webpack`, etc.).
+- **📊 100% Genuine Benchmark Dataset**: Contains 28 authentic LLM-generated README outputs across diverse public GitHub repositories (`facebook/react`, `denoland/deno`, `webpack/webpack`, `expressjs/cors`, etc.) generated via Groq Llama 3.3 70B & Gemini API. All raw outputs are saved in `scratch/generated_raw_readmes.json`.
 - **⚡ Automated QA Audit (LLM-as-a-Judge)**: Analyzes generated README documentation against source repository file trees and dependencies, scoring all 5 rubric metrics and generating repo-specific critique notes.
 - **🔄 Multi-Provider Rate-Limit Fallback**: Automatic rotation runner across Groq (`llama-3.3-70b-versatile`, `llama-3.1-8b-instant`), OpenRouter (`deepseek-r1`, `gemini-2.0-flash-lite`, `qwen-2.5-72b`), and Gemini API (`gemini-2.0-flash`).
 - **🔍 Full-Text Search & Category Filters**: Search repositories or evaluation notes in real-time, and filter by Failures ($\le 2$), Small, Medium, or Large complexity.
@@ -66,23 +66,27 @@ DocEval AI is a benchmark platform for auditing LLM-generated technical document
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Project Architecture & Pipeline
 
 ```
 DocEval-AI/
-├── dataset.json            # Flat JSON database storing 28 annotated GitHub benchmark evaluations
-├── server.ts               # Express backend & API routes (GitHub tree parser, LLM runner)
+├── dataset.json                    # Flat JSON database storing 28 annotated GitHub benchmark evaluations
+├── scratch/
+│   ├── generated_raw_readmes.json  # Raw LLM-generated README outputs for all 28 repositories
+│   ├── fetch_and_generate_missing.js # Pipeline script fetching GitHub trees & invoking LLM API
+│   └── audit_real_readmes.js       # Rubric auditing script evaluating generated text
+├── server.ts                       # Express backend & API routes (GitHub tree parser, LLM runner)
 ├── src/
-│   ├── App.tsx             # Main layout & sidebar navigation
+│   ├── App.tsx                     # Main layout & sidebar navigation
 │   ├── components/
-│   │   ├── Overview.tsx    # Domain brief & framework goals
-│   │   ├── Rubric.tsx      # Interactive 5-metric rubric guide
-│   │   ├── Dataset.tsx     # Filterable, searchable benchmark dataset table & export
-│   │   ├── Analysis.tsx    # Statistical charts & complexity distribution
-│   │   └── Evaluator.tsx   # Live README generator & Automated QA Audit tool
-│   ├── data.ts             # Default fallback benchmark dataset
-│   └── types.ts            # TypeScript definitions
-└── vite.config.ts          # Vite frontend configuration
+│   │   ├── Overview.tsx            # Domain brief & framework goals
+│   │   ├── Rubric.tsx              # Interactive 5-metric rubric guide
+│   │   ├── Dataset.tsx             # Filterable, searchable benchmark dataset table & export
+│   │   ├── Analysis.tsx            # Statistical charts & complexity distribution
+│   │   └── Evaluator.tsx           # Live README generator & Automated QA Audit tool
+│   ├── data.ts                     # Default fallback benchmark dataset
+│   └── types.ts                    # TypeScript definitions
+└── vite.config.ts                  # Vite frontend configuration
 ```
 
 ---
