@@ -1,4 +1,4 @@
-import { useState, ReactNode } from 'react';
+import { useState, ReactNode, createElement } from 'react';
 import { Save, Loader2, Play, Code, Eye, Copy, Check, AlertTriangle, X, ShieldCheck, Cpu } from 'lucide-react';
 
 const cleanErrorMessage = (msg: string) => {
@@ -12,18 +12,16 @@ const cleanErrorMessage = (msg: string) => {
   return msg.replace(/\s*\([^)]*(Groq|OpenRouter|Gemini|llama|qwen|mixtral)[^)]*\)/gi, '').trim();
 };
 
-const AnimatedAuditIcon = ({ isAuditing }: { isAuditing: boolean }) => (
-  <div className="relative flex items-center justify-center w-4 h-4 shrink-0">
-    <span className="absolute inset-0 rounded-full bg-indigo-500/40 animate-ping opacity-75" />
-    <svg className="w-4 h-4 relative z-10 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-      <circle cx="12" cy="12" r="9" className="stroke-indigo-500/30" />
-      <path 
-        d="M12 3a9 9 0 0 1 9 9" 
-        className={isAuditing ? "animate-spin origin-center stroke-cyan-300" : "stroke-indigo-400"}
-        strokeLinecap="round"
-      />
-      <circle cx="12" cy="12" r="3" className="fill-indigo-400 animate-pulse" />
-    </svg>
+const LottieDocumentIcon = ({ isAuditing }: { isAuditing: boolean }) => (
+  <div className="w-7 h-7 flex items-center justify-center shrink-0">
+    {createElement('lottie-player', {
+      src: '/Document OCR Scan.json',
+      background: 'transparent',
+      speed: isAuditing ? '2' : '1',
+      style: { width: '28px', height: '28px' },
+      loop: true,
+      autoplay: true,
+    })}
   </div>
 );
 
@@ -464,16 +462,16 @@ export default function Evaluator({ onSaved }: { onSaved: () => void }) {
               <button
                 onClick={handleAutoAudit}
                 disabled={isAuditing || !generatedReadme}
-                className="relative group overflow-hidden rounded-xl p-[1px] text-xs font-semibold shadow-md hover:shadow-indigo-500/25 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98]"
+                className="relative group overflow-hidden rounded-xl p-[1.5px] text-sm font-semibold shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98]"
                 title="Run automated QA audit against the 5-metric rubric"
               >
                 {/* Moving Animated Shimmer Border */}
-                <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 rounded-xl opacity-80 group-hover:opacity-100 transition-opacity" />
+                <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 rounded-xl opacity-90 group-hover:opacity-100 transition-opacity" />
                 
                 {/* Button Inner Content */}
-                <div className="relative flex items-center gap-2 bg-slate-950 hover:bg-slate-900 text-white px-3.5 py-1.5 rounded-[11px] transition-colors">
-                  <AnimatedAuditIcon isAuditing={isAuditing} />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300 font-medium tracking-wide">
+                <div className="relative flex items-center gap-2.5 bg-slate-950 hover:bg-slate-900 text-white px-5 py-2.5 rounded-[10px] transition-colors">
+                  <LottieDocumentIcon isAuditing={isAuditing} />
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300 font-semibold tracking-wide text-sm">
                     {isAuditing ? 'Auditing Codebase...' : 'Run Automated Audit'}
                   </span>
                 </div>
