@@ -12,16 +12,23 @@ const cleanErrorMessage = (msg: string) => {
   return msg.replace(/\s*\([^)]*(Groq|OpenRouter|Gemini|llama|qwen|mixtral)[^)]*\)/gi, '').trim();
 };
 
-const LottieDocumentIcon = ({ isAuditing }: { isAuditing: boolean }) => (
-  <div className="w-7 h-7 flex items-center justify-center shrink-0">
-    {createElement('lottie-player', {
-      src: '/document-ocr-scan.json',
-      background: 'transparent',
-      speed: isAuditing ? '2' : '1',
-      style: { width: '28px', height: '28px' },
-      loop: true,
-      autoplay: true,
-    })}
+const DocumentScanIcon = ({ isAuditing }: { isAuditing: boolean }) => (
+  <div className="relative w-6 h-6 shrink-0 flex items-center justify-center overflow-hidden rounded-md bg-slate-900 border border-slate-700/80 shadow-inner">
+    {/* Animated Document Vector Sheet */}
+    <svg className="w-4 h-4 text-indigo-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="3" width="16" height="18" rx="2" className="stroke-indigo-400/80 fill-slate-950/40" />
+      <line x1="8" y1="7" x2="16" y2="7" className="stroke-indigo-200 stroke-[2]" />
+      <line x1="8" y1="11" x2="14" y2="11" className="stroke-indigo-300/70" />
+      <line x1="8" y1="15" x2="16" y2="15" className="stroke-indigo-300/70" />
+      <line x1="8" y1="18" x2="12" y2="18" className="stroke-indigo-400/50" />
+    </svg>
+
+    {/* OCR Horizontal Scanning Laser Beam */}
+    <div 
+      className={`absolute left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-400 via-indigo-300 to-cyan-400 shadow-[0_0_8px_#38bdf8] ${
+        isAuditing ? 'animate-[scan_1s_ease-in-out_infinite]' : 'animate-[scan_2.2s_ease-in-out_infinite]'
+      }`}
+    />
   </div>
 );
 
@@ -470,7 +477,7 @@ export default function Evaluator({ onSaved }: { onSaved: () => void }) {
                 
                 {/* Button Inner Content */}
                 <div className="relative flex items-center gap-2.5 bg-slate-950 hover:bg-slate-900 text-white px-5 py-2.5 rounded-[10px] transition-colors">
-                  <LottieDocumentIcon isAuditing={isAuditing} />
+                  <DocumentScanIcon isAuditing={isAuditing} />
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300 font-semibold tracking-wide text-sm">
                     {isAuditing ? 'Auditing Codebase...' : 'Run Automated Audit'}
                   </span>
