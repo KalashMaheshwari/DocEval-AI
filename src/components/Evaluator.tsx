@@ -13,19 +13,19 @@ const cleanErrorMessage = (msg: string) => {
 };
 
 const DocumentScanIcon = ({ isAuditing }: { isAuditing: boolean }) => (
-  <div className="relative w-6 h-6 shrink-0 flex items-center justify-center overflow-hidden rounded-md bg-slate-900 border border-slate-700/80 shadow-inner">
+  <div className="relative w-5 h-5 shrink-0 flex items-center justify-center overflow-hidden">
     {/* Animated Document Vector Sheet */}
-    <svg className="w-4 h-4 text-indigo-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="4" y="3" width="16" height="18" rx="2" className="stroke-indigo-400/80 fill-slate-950/40" />
-      <line x1="8" y1="7" x2="16" y2="7" className="stroke-indigo-200 stroke-[2]" />
-      <line x1="8" y1="11" x2="14" y2="11" className="stroke-indigo-300/70" />
-      <line x1="8" y1="15" x2="16" y2="15" className="stroke-indigo-300/70" />
-      <line x1="8" y1="18" x2="12" y2="18" className="stroke-indigo-400/50" />
+    <svg className="w-5 h-5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="3" width="16" height="18" rx="2" className="stroke-indigo-600 fill-white" />
+      <line x1="8" y1="7" x2="16" y2="7" className="stroke-indigo-600 stroke-[2]" />
+      <line x1="8" y1="11" x2="14" y2="11" className="stroke-indigo-400" />
+      <line x1="8" y1="15" x2="16" y2="15" className="stroke-indigo-400" />
+      <line x1="8" y1="18" x2="12" y2="18" className="stroke-indigo-300" />
     </svg>
 
     {/* OCR Horizontal Scanning Laser Beam */}
     <div 
-      className={`absolute left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-400 via-indigo-300 to-cyan-400 shadow-[0_0_8px_#38bdf8] ${
+      className={`absolute left-0 right-0 h-[2px] bg-gradient-to-r from-indigo-500 via-cyan-400 to-indigo-500 shadow-[0_0_6px_#6366f1] ${
         isAuditing ? 'animate-[scan_1s_ease-in-out_infinite]' : 'animate-[scan_2.2s_ease-in-out_infinite]'
       }`}
     />
@@ -469,19 +469,11 @@ export default function Evaluator({ onSaved }: { onSaved: () => void }) {
               <button
                 onClick={handleAutoAudit}
                 disabled={isAuditing || !generatedReadme}
-                className="relative group overflow-hidden rounded-xl p-[1.5px] text-sm font-semibold shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98]"
+                className="inline-flex items-center gap-2.5 bg-white text-slate-800 hover:text-indigo-600 border border-slate-200 hover:border-indigo-300 px-4 py-2 rounded-xl text-xs font-semibold shadow-xs hover:shadow-indigo-500/10 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98]"
                 title="Run automated QA audit against the 5-metric rubric"
               >
-                {/* Moving Animated Shimmer Border */}
-                <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 rounded-xl opacity-90 group-hover:opacity-100 transition-opacity" />
-                
-                {/* Button Inner Content */}
-                <div className="relative flex items-center gap-2.5 bg-slate-950 hover:bg-slate-900 text-white px-5 py-2.5 rounded-[10px] transition-colors">
-                  <DocumentScanIcon isAuditing={isAuditing} />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300 font-semibold tracking-wide text-sm">
-                    {isAuditing ? 'Auditing Codebase...' : 'Run Automated Audit'}
-                  </span>
-                </div>
+                <DocumentScanIcon isAuditing={isAuditing} />
+                <span>{isAuditing ? 'Auditing Codebase...' : 'Run Automated Audit'}</span>
               </button>
             </div>
             
