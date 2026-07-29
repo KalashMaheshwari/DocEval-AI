@@ -1,5 +1,18 @@
 [
   {
+    "repoName": "KalashMaheshwari/DocEval-AI",
+    "repoComplexity": "Small",
+    "scores": {
+      "accuracy": 4,
+      "completeness": 3,
+      "hallucination": 4,
+      "structure": 5,
+      "scope": 4
+    },
+    "notes": "The README for KalashMaheshwari/DocEval-AI accurately reflects the source code files and languages, but lacks a complete API section, and the installation instructions could be more detailed, however, the structure and formatting are well-organized and easy to follow.",
+    "id": "1785327779712"
+  },
+  {
     "id": "1",
     "repoName": "lukeed/clsx",
     "repoComplexity": "Small",

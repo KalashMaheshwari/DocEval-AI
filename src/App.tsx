@@ -11,7 +11,7 @@ import Dataset from './components/Dataset';
 import Analysis from './components/Analysis';
 import Evaluator from './components/Evaluator';
 import { FileText, ListChecks, Database, BarChart3, Edit3, Info, FileCheck } from 'lucide-react';
-import logoImg from './assets/logo.webp';
+import logoImg from './assets/logo-optimized.png';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('overview');
