@@ -11,6 +11,7 @@ import Dataset from './components/Dataset';
 import Analysis from './components/Analysis';
 import Evaluator from './components/Evaluator';
 import { FileText, ListChecks, Database, BarChart3, Edit3, Info, FileCheck } from 'lucide-react';
+import logoImg from './assets/logo.webp';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('overview');
@@ -49,7 +50,7 @@ export default function App() {
       <aside className="w-full md:w-64 bg-white border-r border-slate-200 shrink-0 shadow-sm z-10 flex flex-col">
         <div className="px-6 py-5 border-b border-slate-200/80">
           <div className="flex items-center gap-2.5">
-            <FileCheck className="w-5 h-5 text-slate-800 shrink-0 stroke-[2.2]" />
+            <img src={logoImg} alt="Logo" className="w-6 h-6 shrink-0 object-contain" />
             <span className="font-semibold text-slate-900 tracking-tight text-base">DocEval</span>
             <span className="text-xs font-mono font-medium text-slate-400 border-l border-slate-200 pl-2.5">bench</span>
           </div>
